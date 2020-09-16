@@ -73,7 +73,7 @@
         }
         .description{
             grid-area: description;
-            font-size: small;
+            font-size: medium;
         
         }
         .cv {
@@ -91,18 +91,16 @@
             
         }
         .skill-box{
-            padding: 5px;
-            text-align: center;
             border: 1px solid;
-            height: 20px;
-            font-size: small;
+            height: 30px;
             border-radius: 10%;
-            width: auto;
+            margin-bottom: 10px;
             
         }
         .picture > img {
             border-radius: 50%;
             margin-left: 50px;
+            box-shadow: 0 0 50px #000000;
         }
         .content {
             grid-area: information;
@@ -186,10 +184,24 @@
         }
 
     
-        @media screen and (max-width: 480px) {
-            .flex-container {
-                flex-direction: column;
-                
+        @media screen and (max-width: 772px) {
+            
+            .grid-container{
+                grid-template-areas: 
+                "pciture"
+                "information"
+                "avatar"
+                "about";
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                justify-self: center;
+            }
+            .picture{
+                align-self: center;
+                margin-left: 50px;
+            }
+            .about{
+                align-self: center;
+                margin-left: 140px;
             }
         }
     </style>
@@ -257,14 +269,13 @@
                     </div>
 
                     <div class="description">
-                        Khizar Khan is passionate about emerging technologies and innovative ideas that can really create a positive change
+                        Khizar Khan is passionate about emerging technologies and innovative ideas that can really create a positive change. Khizar Khan likes to work in teams.
 
                     <div class="skills">
-                        <p class="skill-box">Html</p>
-                        <p class="skill-box">Css</p>
-                        <p class="skill-box">Bootstrap</p>
-                        <p class="skill-box">Jquery</p>
-                        <p class="skill-box">Express</p>
+                        <button class="skill-box">Html</button>
+                        <button class="skill-box">Css</button>
+                        <button class="skill-box">Jquery</button>
+                        <button class="skill-box">React</button>
                     </div>
                     <div class="cv">
                         <button class="cv-btn"> <i class="fa fa-download" style="margin: 0px;"></i> Download CV</button>
