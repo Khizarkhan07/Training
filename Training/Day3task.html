@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <style>
@@ -36,22 +37,80 @@
             border-bottom: 1px solid black;
             margin-left: 2px;
         }
+        .avatar {
+            grid-area: avatar;
+            align-self: end;
+            text-align: end;
+            margin-bottom: 40px;
+            
+        }
         .picture {
             grid-area: pciture;
             margin-top: 50px;
             margin-left: 5px;
             
         }
+        .about {
+            grid-area: about;
+            align-self: end;
+            margin-bottom: 40px;
+            margin-left: 50px;
+            display: grid;
+            gap: 2px;
+            grid-template-rows: 50px 10px 20px 20px 20px;
+            grid-template-areas: 
+            "Aboutme" 
+            "empty"
+            "description"
+            "skills"
+            "download"
+            ;
+
+        }
+
+        .aboutme{
+            grid-area: Aboutme;
+        }
+        .description{
+            grid-area: description;
+            font-size: small;
+        
+        }
+        .cv {
+            grid-area: download;
+            margin-bottom: 5px;
+        }
+        .skills{
+            margin-top: 15px;
+            grid-area: skills;
+            display: grid;
+            
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+            
+        }
+        .skill-box{
+            padding: 5px;
+            text-align: center;
+            border: 1px solid;
+            height: 20px;
+            font-size: small;
+            border-radius: 10%;
+            width: auto;
+            
+        }
         .picture > img {
             border-radius: 50%;
-            box-shadow: 5px 5px 5px #c9b3b1;
+            margin-left: 50px;
         }
         .content {
             grid-area: information;
             text-align: center;
             margin-top: 50px;
             display: grid;
-            grid-template-rows: 50px 40px 40px 20px 20px 20px 20px ;
+            gap: 2px;
+            grid-template-rows: 50px 40px 40px 20px 20px 20px 20px 30px 20px;
             grid-template-areas: 
             "hire"
             "info"
@@ -59,7 +118,10 @@
             "empty"
             "email"
             "phone"
-            "address";
+            "address"
+            "empty1"
+            "media"
+            ;
 
         }
         .hire-button{
@@ -76,6 +138,18 @@
             color: cornsilk;
             font-family: 'Roboto';
         }
+        .cv-btn {
+            background-color:#6fde79;
+            height: 40px;
+            width: 120px;
+            padding: 5px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            color: cornsilk;
+            font-family: 'Roboto';
+        }
         .info {
             grid-area: info;
             margin-left: 70px;
@@ -85,20 +159,33 @@
             grid-area: subinfo ;
         }
         .email {
+            font-size: small;
             grid-area: email;
-            margin-left: 100px;
+            margin-left: 120px;
         }
         .phone {
+            font-size: small;
             grid-area: phone;
-            margin-left: 50px;
+            margin-left: 60px;
         }
         .address {
+            font-size: small;
             grid-area: address;
-            margin-left: 50px;
+            margin-left: 75px;
+        }
+        .media {
+            font-size: small;
+            grid-area: media;
+            margin-left: 80px;
         }
         div > h4 {
             margin-left: 50px;
         }
+        i{
+            margin-right: 25px;
+        }
+
+    
         @media screen and (max-width: 480px) {
             .flex-container {
                 flex-direction: column;
@@ -129,19 +216,59 @@
                     <div class="sun-info">
                         <h4>Software Engineer</h4>
                     </div>
-                    <div class="email">
+                    <div class="email" style="display: flex; justify-self: center;">
+                        <i class="fa fa-envelope"></i>
                         Khizar.khan@emumba.com
                     </div>
                     
-                    <div class="phone">
+                    <div class="phone" style="display: flex; justify-self: center;">
+                        <i class="fa fa-phone"></i>
                        +92-331 7354483
                     </div>
-                    <div class="address">
+                    <div class="address" style="display: flex; justify-self: center;">
+                        <i class="fa fa-address-card"></i>
                         Emumba Islamabad
                     </div>
+                    <div class="media" style="display: flex; justify-self: center;">
+                        <i class="fa fa-facebook-f"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-github"></i>
+                        <i class="fa fa-instagram"></i>
+                        
+                    </div>
+                   
+
                 </div>
                 <div class="picture">
+                
                     <img style="height: 200px; width: 200px;" src="./avatar.jpg" alt="">
+                    
+                </div>
+
+                <div class="avatar">
+                
+                    <img style="height: 200px; width: 200px;" src="./image.png" alt="">
+                    
+                </div>
+
+                <div class="about">
+                    <div class="aboutme">
+                        <h2>About Me</h2>
+                    </div>
+
+                    <div class="description">
+                        Khizar Khan is passionate about emerging technologies and innovative ideas that can really create a positive change
+
+                    <div class="skills">
+                        <p class="skill-box">Html</p>
+                        <p class="skill-box">Css</p>
+                        <p class="skill-box">Bootstrap</p>
+                        <p class="skill-box">Jquery</p>
+                        <p class="skill-box">Express</p>
+                    </div>
+                    <div class="cv">
+                        <button class="cv-btn"> <i class="fa fa-download" style="margin: 0px;"></i> Download CV</button>
+                    </div>
                 </div>
             </div>
         </main>
