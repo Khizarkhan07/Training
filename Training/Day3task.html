@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+        .flex-container {
+            justify-content: center;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .grid-container {
+            margin-top: 50px;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas: 
+            "information pciture"
+            "avatar about";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .flex-container > div {
+            width: 60px;
+            margin: 10px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .nav-active{
+            border-bottom: 1px solid black;
+            margin-left: 2px;
+        }
+        .picture {
+            grid-area: pciture;
+            margin-top: 50px;
+            margin-left: 5px;
+            
+        }
+        .picture > img {
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px #c9b3b1;
+        }
+        .content {
+            grid-area: information;
+            text-align: center;
+            margin-top: 50px;
+            display: grid;
+            grid-template-rows: 50px 40px 40px 20px 20px 20px 20px ;
+            grid-template-areas: 
+            "hire"
+            "info"
+            "subinfo"
+            "empty"
+            "email"
+            "phone"
+            "address";
+
+        }
+        .hire-button{
+            grid-area: hire;
+        }
+        .hire-btn {
+            background-color:#6fde79;
+            height: 40px;
+            width: 80px;
+            padding: 5px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: cornsilk;
+            font-family: 'Roboto';
+        }
+        .info {
+            grid-area: info;
+            margin-left: 70px;
+        
+        }
+        .sub-info {
+            grid-area: subinfo ;
+        }
+        .email {
+            grid-area: email;
+            margin-left: 100px;
+        }
+        .phone {
+            grid-area: phone;
+            margin-left: 50px;
+        }
+        .address {
+            grid-area: address;
+            margin-left: 50px;
+        }
+        div > h4 {
+            margin-left: 50px;
+        }
+        @media screen and (max-width: 480px) {
+            .flex-container {
+                flex-direction: column;
+                
+            }
+        }
+    </style>
+    <body>
+        <div class="flex-container">
+            <div class="nav-active">Home</div>
+            <div>About</div>
+            <div>Skills</div> 
+            <div>Portfolio</div>
+            <div>Pricing</div>  
+            <div>Blog</div>
+            <div>Contact</div>
+        </div>
+        
+        <main>
+            <div class="grid-container">
+                <div class="content">
+                    <div class="hire-button">
+                        <button class="hire-btn" type="submit">Hire me </button>
+                    </div>
+                    <div class="info">
+                        <h2>KHIZAR KHAN</h2>
+                    </div>
+                    <div class="sun-info">
+                        <h4>Software Engineer</h4>
+                    </div>
+                    <div class="email">
+                        Khizar.khan@emumba.com
+                    </div>
+                    
+                    <div class="phone">
+                       +92-331 7354483
+                    </div>
+                    <div class="address">
+                        Emumba Islamabad
+                    </div>
+                </div>
+                <div class="picture">
+                    <img style="height: 200px; width: 200px;" src="./avatar.jpg" alt="">
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
