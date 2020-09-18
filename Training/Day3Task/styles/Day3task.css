@@ -155,10 +155,10 @@ body{
 .designation {
     grid-area: subinfo ;
 }
-.flex {
+.email, .phone, .address , .media {
     display: flex;
     justify-self: center;
-}
+} 
 .email {
     font-size: small;
     grid-area: email;
