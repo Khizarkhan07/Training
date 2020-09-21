@@ -29,14 +29,14 @@ body{
     border-bottom: 1px solid black;
     margin-left: 2px;
 }
-.avatar {
+#avatar {
     grid-area: avatar;
     align-self: end;
     text-align: end;
     margin-bottom: 40px;
     
 }
-.picture {
+#picture {
     grid-area: pciture;
     margin-top: 50px;
     margin-left: 5px;
@@ -72,7 +72,7 @@ body{
     grid-area: download;
     margin-bottom: 5px;
 }
-.skills{
+#skills{
     margin-top: 15px;
     grid-area: skills;
     display: grid;
@@ -82,14 +82,15 @@ body{
     grid-gap: 10px;
     
 }
-.skill-box{
+/* Nesting! */
+#skills button {
     border: 1px solid;
     height: 30px;
     border-radius: 10%;
     margin-bottom: 10px;
-    
 }
-.picture > img {
+/* Nesting */
+#picture  img {
     border-radius: 50%;
     margin-left: 50px;
     border: 10px solid rgb(216, 216, 216);
@@ -117,6 +118,9 @@ body{
     ;
 
 }
+.content i {
+    margin-right: 25px;
+}
 .hire-button{
     grid-area: hire;
 }
@@ -143,9 +147,8 @@ body{
     color: cornsilk;
     font-family: 'Roboto';
 }
-.cv > i {
-    margin: 0px;
-}
+
+
 
 .name {
     grid-area: info;
@@ -155,10 +158,12 @@ body{
 .designation {
     grid-area: subinfo ;
 }
+/* grouping! */
 .email, .phone, .address , .media {
     display: flex;
     justify-self: center;
 } 
+
 .email {
     font-size: small;
     grid-area: email;
@@ -174,17 +179,20 @@ body{
     grid-area: address;
     margin-left: 75px;
 }
-.media {
+#media {
     font-size: small;
     grid-area: media;
     margin-left: 80px;
 }
+/* nesting */
+#media i {
+    margin-right: 25px;
+}
+/* combinator */
 div > h4 {
     margin-left: 50px;
 }
-i{
-    margin-right: 25px;
-}
+
 
 
 @media screen and (max-width: 772px) {
@@ -201,7 +209,7 @@ i{
         grid-template-rows: 1fr 1fr 1fr;
         justify-self: center;
     }
-    .picture{
+    #picture{
         align-self: center;
         margin-left: 50px;
     
@@ -210,7 +218,7 @@ i{
         align-self: center;
         margin-left: 120px;
     }
-    .avatar{
+    #avatar{
         display: none;
     }
 }
